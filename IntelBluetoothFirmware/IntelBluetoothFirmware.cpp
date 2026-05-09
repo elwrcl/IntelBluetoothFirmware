@@ -145,7 +145,7 @@ IOService * IntelBluetoothFirmware::probe(IOService *provider, SInt32 *score)
     UInt16 vendorID = USBToHost16(m_pDevice->getDeviceDescriptor()->idVendor);
     UInt16 productID = USBToHost16(m_pDevice->getDeviceDescriptor()->idProduct);
     XYLog("name=%s, class=%s, vendorID=0x%04X, productID=0x%04X\n", m_pDevice->getName(), provider->metaClass->getClassName(), vendorID, productID);
-    if (productID == 0x07dc || productID == 0x0a2a || productID == 0x0aa7) {
+    if (productID == 0x07dc || productID == 0x07da || productID == 0x0a2a || productID == 0x0aa7) {
         currentType = kTypeGen1;
     } else if (productID == 0x0032 || productID == 0x0033 || productID == 0x0035
                || productID == 0x0036 || productID == 0x0038) {
